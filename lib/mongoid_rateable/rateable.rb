@@ -30,7 +30,7 @@ module Mongoid
  				unrate_without_rating_update(rater)
  				total_mark = mark.to_i*weight.to_i
  				self.rates += total_mark
- 				self.rating_marks.new(:rater_id => rater.id, :mark => mark, :rater_class => rater.class.to_s, :weight => weight)
+ 				self.rating_marks.create(:rater_id => rater.id, :mark => mark, :rater_class => rater.class.to_s, :weight => weight)
 				self.weighted_rate_count += weight
  				update_rating
 			end
