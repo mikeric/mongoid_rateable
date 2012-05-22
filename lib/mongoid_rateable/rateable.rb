@@ -7,7 +7,7 @@ module Mongoid
 			field :rating, :type => Float, :default => nil
 			field :weighted_rate_count, :type => Integer, :default => 0
 
-			embeds_many :rating_marks, :as => :rateable, :autosave => true
+			embeds_many :rating_marks, :as => :rateable
 
 			index(
 				[
